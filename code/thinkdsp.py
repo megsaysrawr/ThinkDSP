@@ -615,6 +615,11 @@ class Wave(object):
         """
         self.ys *= numpy.hamming(len(self.ys))
 
+    def bartlett(self):
+        """Apply a Bartlett window to the wave.
+        """
+        self.ys *= numpy.bartlett(len(self.ys))
+
     def window(self, window):
         """Apply a window to the wave.
 
